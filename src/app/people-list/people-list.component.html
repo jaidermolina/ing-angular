@@ -1,0 +1,9 @@
+<ul>  
+    <li *ngFor="let p of peoples" 
+    (click)="onSelect(p)" 
+    [class.selected]="p === selectedPerson">
+      <a [routerLink]="['/people-inf', getPersonId(p) ]" routerLinkActive="active">
+      {{ p.name }}</a>
+    </li>
+    <mat-paginator [length]="count" [pageSize]="10" (page)="gestorPaginacion()"> </mat-paginator> 
+</ul> 
