@@ -1,9 +1,9 @@
-<p>{{film.title | json}}</p>
-<p>{{film.episode_id | json}}</p>
-<p>{{film.director | json}}</p>
-<p>{{film.producer | json}}</p>
+<p>Titulo : {{film.title }}</p>
+<p>Episode_id : {{film.episode_id }}</p>
+<p>Director : {{film.director }}</p>
+<p>Productor : {{film.producer }}</p>
 <p>Personajes</p>
-<li *ngFor="let f of film.characters">
-    <a [routerLink]="['/people-inf', getPeopleId(f) ]" routerLinkActive="active">
-        {{f | json}}</a>
+<li *ngFor="let p of people">
+    <a [routerLink]="['/people-inf', getPeopleId(p.url) ]" routerLinkActive="active">
+        {{ p.name }}</a>
 </li>

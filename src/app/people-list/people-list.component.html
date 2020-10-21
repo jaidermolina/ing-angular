@@ -5,5 +5,7 @@
       <a [routerLink]="['/people-inf', getPersonId(p) ]" routerLinkActive="active">
       {{ p.name }}</a>
     </li>
-    <mat-paginator [length]="count" [pageSize]="10" (page)="gestorPaginacion()"> </mat-paginator> 
+    <div class="paginator">
+      <mat-paginator  [length]="count" [pageSize]="10" (page)="gestorPaginacion()"> </mat-paginator> 
+    </div>
 </ul> 

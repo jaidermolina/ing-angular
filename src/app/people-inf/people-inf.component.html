@@ -1,9 +1,9 @@
 <p>Aqui va la informacion de cada personaje</p>
-<p>Nombre : {{ people.name | json}}</p>
-<p>Altura : {{ people.height | json}}</p>
-<p>Año nacimiento : {{ people.birth_year | json}}</p>
+<p>Nombre : {{ people.name }}</p>
+<p>Altura : {{ people.height }}</p>
+<p>Año nacimiento : {{ people.birth_year }}</p>
 <p>Peliculas participadas</p>
-<li *ngFor="let p of people.films">
-    <a [routerLink]="['/film-inf', getFilmsId(p) ]" routerLinkActive="active">
-        {{ p | json}}</a>
+<li *ngFor="let f of films">
+    <a [routerLink]="['/film-inf', getFilmsId(f.url) ]" routerLinkActive="active">
+        {{ f.title }}</a>
 </li>
